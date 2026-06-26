@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TopBar from "../components/top-bar";
+import { tileSizes } from "../lib/tile-sizes";
 
 const CLOUD = "https://res.cloudinary.com/dixdfunwk/image/upload";
 const BLUE = "#0015ff";
@@ -22,7 +23,7 @@ function Tile({ t }) {
   return (
     <div style={{ gridArea: t.area }} className="relative overflow-hidden">
       {t.img ? (
-        <Image src={t.img} alt={t.label} fill sizes="33vw" className="object-cover" style={{ objectPosition: t.pos || "center" }} />
+        <Image src={t.img} alt={t.label} fill sizes={tileSizes(t.area)} className="object-cover" style={{ objectPosition: t.pos || "center" }} />
       ) : t.video ? (
         <video src={t.video} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" />
       ) : (
