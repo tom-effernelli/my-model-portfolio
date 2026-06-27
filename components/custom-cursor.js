@@ -6,15 +6,18 @@ export default function CustomCursor() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-    setVisible(true);
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) setVisible(true);
+  }, []);
+
+  useEffect(() => {
+    if (!visible) return;
     const el = ref.current;
     const move = (e) => {
       el.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     };
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
-  }, []);
+  }, [visible]);
 
   if (!visible) return null;
 
