@@ -5,23 +5,24 @@ import TopBar from "../components/top-bar";
 import { tileSizes } from "../lib/tile-sizes";
 
 const CLOUD = "https://res.cloudinary.com/dixdfunwk/image/upload";
+const CLOUD_VID = "https://res.cloudinary.com/dixdfunwk/video/upload";
 const BLUE = "#0015ff";
 
 // Home showcase. Each tile occupies an explicit grid area (rowStart / colStart / rowEnd / colEnd)
 // over a 3-column grid. To turn a placeholder into a real video, set `video` to an .mp4 URL.
 const tiles = [
   { area: "1 / 1 / 10 / 2",  img: `${CLOUD}/v1782413583/A7400036_-_P_jy9kpi.jpg`, pos: "center",     label: "(01) SHOOTING 01 — MODEL" },
-  { area: "1 / 2 / 4 / 3",   video: null,                                                              label: "(02) FILM — À AJOUTER" },
+  { area: "1 / 2 / 4 / 3",   video: `${CLOUD_VID}/blur_text_qyh2da.mp4`,                               label: "(02) FILM — BLUR TEXT" },
   { area: "4 / 2 / 10 / 3",  img: `${CLOUD}/A7400458_-_P_bu3j6l.jpg`,              pos: "center 25%", label: "(03) SHOOTING 02 — OUTDOOR" },
   { area: "1 / 3 / 5 / 4",   img: `${CLOUD}/A7400326_-_P_l66zkz.jpg`,              pos: "center 30%", label: "(04) SHOOTING 02 — EDITORIAL" },
-  { area: "5 / 3 / 7 / 4",   video: null,                                                              label: "(05) FILM — À AJOUTER" },
+  { area: "5 / 3 / 7 / 4",   video: `${CLOUD_VID}/man_looking_pixel_vbanqt.mp4`,                      label: "(05) FILM — MAN LOOKING" },
   { area: "7 / 3 / 16 / 4",  img: `${CLOUD}/A7400626_-_P_jjhdap.jpg`,              pos: "center",     label: "(06) SHOOTING 02 — MODEL" },
-  { area: "10 / 1 / 16 / 3", video: null,                                                              label: "(07) FILM — À AJOUTER" },
+  { area: "10 / 1 / 16 / 3", video: `${CLOUD_VID}/crt_mbofse.mp4`,                                    label: "(07) FILM — CRT" },
   { area: "16 / 1 / 23 / 2", img: `${CLOUD}/A7400837_-_P_kudkcj.jpg`,              pos: "center 22%", label: "(08) SHOOTING 02 — MODEL" },
-  { area: "16 / 2 / 20 / 3", video: null,                                                              label: "(09) FILM — À AJOUTER" },
+  { area: "16 / 2 / 20 / 3", video: `${CLOUD_VID}/m2-res_640p_a9hqy4.mp4`,                            label: "(09) FILM — M2-RES" },
   { area: "16 / 3 / 22 / 4", img: `${CLOUD}/A7400519_-_P_pizn6n.jpg`,              pos: "center",     label: "(10) SHOOTING 01 — CINEMA" },
   { area: "20 / 2 / 26 / 3", img: `${CLOUD}/A7400043_-_P_gvna5s.jpg`,              pos: "center",     label: "(11) SHOOTING 01 — MODEL" },
-  { area: "22 / 3 / 26 / 4", video: null,                                                              label: "(12) FILM — À AJOUTER" },
+  { area: "22 / 3 / 26 / 4", video: `${CLOUD_VID}/shoe_qbbc5x.mp4`,                                   label: "(12) FILM — SHOE" },
   { area: "23 / 1 / 26 / 2", img: `${CLOUD}/A7400123_-_P_dzt4hl.jpg`,              pos: "center",     label: "(13) SHOOTING 01 — OUTDOOR" },
 ];
 
