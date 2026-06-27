@@ -20,7 +20,15 @@ function VideoAutoplay({ src }) {
     observer.observe(v);
     v.addEventListener("canplay", tryPlay, { once: true });
     tryPlay();
-    return () => { observer.disconnect(); v.removeEventListener("canplay", tryPlay); };
+    const onInteract = () => tryPlay();
+    window.addEventListener("touchstart", onInteract, { once: true, passive: true });
+    window.addEventListener("scroll", onInteract, { once: true, passive: true });
+    return () => {
+      observer.disconnect();
+      v.removeEventListener("canplay", tryPlay);
+      window.removeEventListener("touchstart", onInteract);
+      window.removeEventListener("scroll", onInteract);
+    };
   }, []);
   return (
     <video ref={ref} autoPlay muted loop playsInline preload="auto" className="absolute inset-0 w-full h-full object-cover">
