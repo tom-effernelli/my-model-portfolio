@@ -50,7 +50,7 @@ function Tile({ t }) {
           <span className="font-mono text-[12px] tracking-[0.16em]" style={{ color: BLUE }}>▶ VIDÉO</span>
         </div>
       )}
-      <span className="absolute left-2.5 bottom-3 font-mono text-[10px] text-white mix-blend-difference">{t.label}</span>
+      <span className="absolute left-2.5 bottom-3 font-mono text-[10px] xs:hidden text-white mix-blend-difference">{t.label}</span>
     </div>
   );
 }
