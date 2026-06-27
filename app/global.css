@@ -4,7 +4,7 @@
 @layer theme, base, components, utilities;
 @config "../tailwind.config.js";
 
-* { cursor: none !important; }
+@media (hover: hover) and (pointer: fine) { * { cursor: none !important; } }
 
 body {
   @apply leading-[normal] m-0;

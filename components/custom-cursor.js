@@ -1,10 +1,13 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CustomCursor() {
   const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    setVisible(true);
     const el = ref.current;
     const move = (e) => {
       el.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
@@ -12,6 +15,8 @@ export default function CustomCursor() {
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
   }, []);
+
+  if (!visible) return null;
 
   return (
     <div
