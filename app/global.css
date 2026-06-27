@@ -4,6 +4,8 @@
 @layer theme, base, components, utilities;
 @config "../tailwind.config.js";
 
+* { cursor: none !important; }
+
 body {
   @apply leading-[normal] m-0;
   font-family: var(--font-archivo), 'Archivo', sans-serif;

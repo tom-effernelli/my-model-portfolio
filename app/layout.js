@@ -1,5 +1,6 @@
 import "./global.css";
 import { Archivo, Archivo_Expanded, JetBrains_Mono, Inter, Space_Grotesk } from 'next/font/google';
+import CustomCursor from "../components/custom-cursor";
 
 const archivo = Archivo({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${archivo.className} ${archivo.variable} ${jetbrainsMono.variable} ${inter.variable} ${spaceGrotesk.variable}`}>
       <body>
+        <CustomCursor />
         {children}
       </body>
     </html>
