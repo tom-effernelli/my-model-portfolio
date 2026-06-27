@@ -1,8 +1,20 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import TopBar from "../components/top-bar";
 import { tileSizes } from "../lib/tile-sizes";
+
+function VideoAutoplay({ src }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    v.muted = true;
+    v.play().catch(() => {});
+  }, []);
+  return <video ref={ref} src={src} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" />;
+}
 
 const CLOUD = "https://res.cloudinary.com/dixdfunwk/image/upload";
 const CLOUD_VID = "https://res.cloudinary.com/dixdfunwk/video/upload";
@@ -32,7 +44,7 @@ function Tile({ t }) {
       {t.img ? (
         <Image src={t.img} alt={t.label} fill sizes={tileSizes(t.area, { desktopRowPx: 70, mobileRowPx: 34 })} className="object-cover" style={{ objectPosition: t.pos || "center" }} />
       ) : t.video ? (
-        <video src={t.video} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" />
+        <VideoAutoplay src={t.video} />
       ) : (
         <div className="absolute inset-0 flex items-center justify-center bg-[#181818]" style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,.22)" }}>
           <span className="font-mono text-[12px] tracking-[0.16em]" style={{ color: BLUE }}>▶ VIDÉO</span>
