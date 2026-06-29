@@ -4,19 +4,26 @@ import TopBar from "../../components/top-bar";
 
 const CLOUD = "https://res.cloudinary.com/dixdfunwk/image/upload";
 
-// Shooting 002 — Each tile occupies an explicit grid area (rowStart / colStart / rowEnd / colEnd)
-// over a 3-column grid. Adjust area values to rearrange the layout freely.
+// Shooting 002 — staggered 3-col portrait grid, all columns end at row 28.
 const shooting2tiles = [
-  { area: "1 / 1 / 9 / 2",  img: `${CLOUD}/A7400837_-_P_kudkcj.jpg`,  pos: "center 22%", label: "(01) SHOOTING 002 — 01" },
-  { area: "1 / 2 / 5 / 3",  img: `${CLOUD}/A7400519_-_P_pizn6n.jpg`,  pos: "center",     label: "(02) SHOOTING 002 — 02" },
-  { area: "1 / 3 / 7 / 4",  img: `${CLOUD}/A7400326_-_P_l66zkz.jpg`,  pos: "center 30%", label: "(03) SHOOTING 002 — 03" },
-  { area: "5 / 2 / 11 / 3", img: `${CLOUD}/A7400458_-_P_bu3j6l.jpg`,  pos: "center 25%", label: "(04) SHOOTING 002 — 04" },
-  { area: "7 / 3 / 13 / 4", img: `${CLOUD}/A7400522_-_P_bpbvbr.jpg`,  pos: "center",     label: "(05) SHOOTING 002 — 05" },
-  { area: "9 / 1 / 17 / 2", img: `${CLOUD}/A7400628_-_P_hb6go8.jpg`,  pos: "center",     label: "(06) SHOOTING 002 — 06" },
-  { area: "11 / 2 / 17 / 3",img: `${CLOUD}/A7400722_-_P_i1kr2u.jpg`,  pos: "center",     label: "(07) SHOOTING 002 — 07" },
-  { area: "13 / 3 / 19 / 4",img: `${CLOUD}/A7400626_-_P_jjhdap.jpg`,  pos: "center",     label: "(08) SHOOTING 002 — 08" },
-  { area: "17 / 1 / 21 / 3",img: `${CLOUD}/A7400515_-_P_enjn1p.jpg`,  pos: "center",     label: "(09) SHOOTING 002 — 09" },
-  { area: "19 / 3 / 21 / 4",img: `${CLOUD}/A7400471_-_P_dwdcsh.jpg`,  pos: "center",     label: "(10) SHOOTING 002 — 10" },
+  // Band 1 — tile carré (cols 1-2) + portrait (col 3)
+  { area: "1 / 1 / 7 / 3",  img: `${CLOUD}/A7400401_-_P_-_version2_kifktz.jpg`, pos: "center", label: "(01) SHOOTING 002 — 01" },
+  { area: "1 / 3 / 7 / 4",  img: `${CLOUD}/A7400339_-_P_-_y2k_g4ngji.jpg`,      pos: "center", label: "(02) SHOOTING 002 — 02" },
+  // Band 2 — 3 portraits égaux
+  { area: "7 / 1 / 13 / 2", img: `${CLOUD}/A7400492_-_P_pgbkrf.jpg`,             pos: "center", label: "(03) SHOOTING 002 — 03" },
+  { area: "7 / 2 / 13 / 3", img: `${CLOUD}/A7400567_-_P_hb6sye.jpg`,             pos: "center", label: "(04) SHOOTING 002 — 04" },
+  { area: "7 / 3 / 13 / 4", img: `${CLOUD}/A7400339_-_P_-_Neutre_kave3x.jpg`,   pos: "center", label: "(05) SHOOTING 002 — 05" },
+  // Band 3 — portrait (col 1) + tile carré (cols 2-3)
+  { area: "13 / 1 / 19 / 2",img: `${CLOUD}/A7400401_-_P_-_Neutre_qsaf21.jpg`,   pos: "center", label: "(06) SHOOTING 002 — 06" },
+  { area: "13 / 2 / 19 / 4",img: `${CLOUD}/A7400401_-_P_fypnwo.jpg`,             pos: "center", label: "(07) SHOOTING 002 — 07" },
+  // Band 4 — 3 portraits égaux
+  { area: "19 / 1 / 25 / 2",img: `${CLOUD}/A7400450_-_P_qqytxz.jpg`,             pos: "center", label: "(08) SHOOTING 002 — 08" },
+  { area: "19 / 2 / 23 / 3",img: `${CLOUD}/A7400553_-_P_rhe8rl.jpg`,             pos: "center", label: "(09) SHOOTING 002 — 09" },
+  { area: "19 / 3 / 25 / 4",img: `${CLOUD}/A7400607_-_P_ayh8pu.jpg`,             pos: "center", label: "(10) SHOOTING 002 — 10" },
+  // Band 5 — 3 portraits (légèrement moins hauts)
+  { area: "25 / 1 / 30 / 2",img: `${CLOUD}/A7400646_-_P_jeyw8q.jpg`,             pos: "center", label: "(11) SHOOTING 002 — 11" },
+  { area: "23 / 2 / 30 / 3",img: `${CLOUD}/A7400763_-_P_wwiend.jpg`,             pos: "center", label: "(12) SHOOTING 002 — 12" },
+  { area: "25 / 3 / 30 / 4",img: `${CLOUD}/A7400779_-_P_bezhiw.jpg`,             pos: "center", label: "(13) SHOOTING 002 — 13" },
 ];
 
 // Shooting 001 — same principle, adjust area values freely.

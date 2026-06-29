@@ -11,12 +11,15 @@ const shooting2tiles = [
   { area: "1 / 2 / 5 / 3",  img: `${CLOUD}/A7400519_-_P_pizn6n.jpg`,  pos: "center",     label: "(02) SHOOTING 002 — 02" },
   { area: "1 / 3 / 7 / 4",  img: `${CLOUD}/A7400326_-_P_l66zkz.jpg`,  pos: "center 30%", label: "(03) SHOOTING 002 — 03" },
   { area: "5 / 2 / 11 / 3", img: `${CLOUD}/A7400458_-_P_bu3j6l.jpg`,  pos: "center 25%", label: "(04) SHOOTING 002 — 04" },
-  { area: "7 / 3 / 13 / 4", img: `${CLOUD}/A7400522_-_P_bpbvbr.jpg`,  pos: "center",     label: "(05) SHOOTING 002 — 05" },
-  { area: "9 / 1 / 17 / 2", img: `${CLOUD}/A7400628_-_P_hb6go8.jpg`,  pos: "center",     label: "(06) SHOOTING 002 — 06" },
+  { area: "7 / 3 / 13 / 4", img: `${CLOUD}/A7400432_-_P_-_Neutre_llk6vk.jpg`,  pos: "center",     label: "(05) SHOOTING 002 — 05" },
+  { area: "9 / 1 / 17 / 2", img: `${CLOUD}/A7400522_-_P_bpbvbr.jpg`,  pos: "center",     label: "(06) SHOOTING 002 — 06" },
   { area: "11 / 2 / 17 / 3",img: `${CLOUD}/A7400722_-_P_i1kr2u.jpg`,  pos: "center",     label: "(07) SHOOTING 002 — 07" },
   { area: "13 / 3 / 19 / 4",img: `${CLOUD}/A7400626_-_P_jjhdap.jpg`,  pos: "center",     label: "(08) SHOOTING 002 — 08" },
   { area: "17 / 1 / 21 / 3",img: `${CLOUD}/A7400515_-_P_enjn1p.jpg`,  pos: "center",     label: "(09) SHOOTING 002 — 09" },
   { area: "19 / 3 / 21 / 4",img: `${CLOUD}/A7400471_-_P_dwdcsh.jpg`,  pos: "center",     label: "(10) SHOOTING 002 — 10" },
+  { area: "21 / 1 / 27 / 2", img: `${CLOUD}/A7400432_-_P_-_V2_m7epyi.jpg`,     pos: "center", label: "(11) SHOOTING 002 — 11" },
+  { area: "21 / 2 / 27 / 3", img: `${CLOUD}/A7400712_-_P_u8dch2.jpg`, pos: "center", label: "(12) SHOOTING 002 — 12" },
+  { area: "21 / 3 / 27 / 4", img: `${CLOUD}/A7400628_-_P_hb6go8.jpg`,           pos: "center", label: "(13) SHOOTING 002 — 13" },
 ];
 
 // Shooting 001 — same principle, adjust area values freely.
